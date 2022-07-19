@@ -139,6 +139,9 @@ lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdtree hop.nvim
 lua require('core.navigation')
+lua << EOF
+require'hop'.setup()
+EOF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hydra 键绑定
 lua require('core.hydra')
