@@ -1,49 +1,40 @@
-" ====================================
-" == Plug 安装
-"mkdir ~/.vim/autoload/ cd ~/.vim/autoload/ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" == 安装bundle
-"git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-" == packer.nvim
-" git clone --depth 1 https://github.com/wbthomason/packer.nvim;~/.local/share/nvim/site/pack/packer/start/packer.nvim
-" git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-" ===================================
-" == 不同系统的配置
-"if has('win32')"macunix unix 
-"    echo "这是Windows 配置"
-"endif
-
-
-" ====================================
-" == 整个配置依赖 Neovim -v 0.6+
-" 1. neovim-python 支持 pip3 install pynvim
-" 2. coc.nvim 需要 NodeJS 支持 (a. :CocInstall coc-json coc-tsserver  (b. 安装你想要的语言 (e.g :CocInstall coc-pytight , 可能需要 pip3 install pyright)
-" 3. vimspector 安装: (a. 安装调试器(e.g pip3 install debugpy) (b. 去到插件目录 ./install_gadget.py --enable-python (c. :VimspectorInstall debugpy 
-" 4. wilder.nvim 插件的 / 搜索不支持在 pynvim 上运行
 
 "if has('win32') "macunix unix win32
 "    echo "这是Windows 配置"
 "endif
 
-set nocompatible
-filetype off
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-" ================= Markdown =================
-Plugin 'iamcco/markdown-preview.nvim'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'dhruvasagar/vim-table-mode'
-call vundle#end()
-filetype plugin indent on
+" set nocompatible
+" filetype off
+" set rtp+=~/.config/nvim/bundle/Vundle.vim
+" call vundle#begin()
+" Plugin 'VundleVim/Vundle.vim'
+" " ================= Markdown =================
+" Plugin 'iamcco/markdown-preview.nvim'
+" Plugin 'plasticboy/vim-markdown'
+" Plugin 'dhruvasagar/vim-table-mode'
+" call vundle#end()
+" filetype plugin indent on
 call plug#begin('~/.config/nvim/plugged')
-Plug 'hecal3/vim-leader-guide'
+" ================= Markdown =================
+Plug 'iamcco/markdown-preview.nvim'
+Plug 'plasticboy/vim-markdown'
+Plug 'dhruvasagar/vim-table-mode'
+
+" =========================================
+" 寄存器, 剪贴板
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
+" =========================================
+" 终端
 Plug 'akinsho/toggleterm.nvim'
+" =========================================
+" Github 补全
 Plug 'github/copilot.vim'
 " ================= 键绑定 =================
-" Plug 'brenopacheco/vim-hydra' " 按键绑定
+Plug 'hecal3/vim-leader-guide'
 Plug 'liuchengxu/vim-which-key' " 键绑定
-" Plug 'dpretet/vim-leader-mapper'
+" ========================================
+" 加密和解密文件
+Plug 'jamessan/vim-gnupg'
 
 " ================= 启动插件 =================
 Plug 'dstein64/vim-startuptime' " 测试启动时间 使用命令 StartupTime
@@ -84,14 +75,13 @@ Plug 'ISouthRain/ZFVimJob' " 可选, 用于提升词库加载性能
 Plug 'ISouthRain/ZFVimIM_openapi' "云词库
 Plug 'ISouthRain/ZFVimIM_pinyin' "db文件
 
-
 " ================= 主题 =================
 Plug 'altercation/vim-colors-solarized' " vim主题
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 
 " ================= 文件浏览器 =================
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } "文件目录浏览器
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeFind' } "文件目录浏览器
 Plug 'ryanoasis/vim-devicons' "文件类型图标
 
 
@@ -436,7 +426,8 @@ EOF
 
 map <capslock>nerdtree :NERDTreeToggle<CR>
 " noremap <Leader>nn :NERDTreeToggle<CR>
-let g:lmap.nn = ['NERDTreeToggle', '文件浏览器']
+" let g:lmap.nn = ['NERDTreeToggle', '文件浏览器']
+let g:lmap.nn = ['NERDTreeFind', '文件浏览器']
 
 " let g:which_key_map['n'] = {
       " \ 'name' : '+NERDTree文件浏览器' ,
@@ -783,56 +774,9 @@ if has("persistent_undo")
 endif
 
 " ==========  配置撤销记录 Undotree.vim 结束 ================== 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-"***********vim配置***********
-" ==============================
-" == 基础设置
-" set nu "设置显示行号
-" 相对行号
-set relativenumber
-"共享剪切板
-set clipboard+=unnamed
-syntax on "语法检测
-set tabstop=4 "设置TAB宽度
-set nobackup "不备份
-set noeb " 去掉输入错误的提示声音
-"设置帮助信息
-set helplang=cn
-" 历史记录数
-set history=1000
-"禁止生成临时文件
-set nobackup
-set noswapfile
-"禁止生成临时文件
-set nobackup
-set noswapfile
-"不复制行号
-se mouse+=a
-set autoread
-" 设置中文提示
-"language messages zh_CN.utf-8
-" 设置中文帮助
-set helplang=cn
-" *******解决中文乱码******""
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-set termencoding=utf-8
-set encoding=utf-8
-"colorscheme slate    " 颜色主题
-colorscheme  dracula
-set background=dark
-" colorscheme peachpuff
-"colorscheme solarized
-"文件在外部更新后立马刷新文件
-set autoread 
-au CursorHold * checktime
-
-"添加环境变量
-" let $PATH='F:\Powershellapplicons\PortableGit\bin'
-" let $PATH='F:\Powershellapplicons\node-v14.18.1-win-x64'
-
-
-
-" =================================
+"" =================================
 " == 自定义函数
 "<f5> 编译和运行C
 " let g:which_key_map.5 = 'c,py,cpp编译运行'
@@ -1093,7 +1037,7 @@ EOF
 
 "============ 配置 neovim 对加密文件的支持 开始====================
 lua << EOF
-require('encrypt-file')
+-- require('encrypt-file')
 EOF
 "============ 配置 neovim 对加密文件的支持 开始====================
 
@@ -1131,3 +1075,7 @@ endif
 call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
+lua << EOF
+require('basic')
+EOF
+
