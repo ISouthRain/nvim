@@ -128,9 +128,11 @@ call plug#end()
 " 基础设置
 lua require('core.basic')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-colors-solarized 'dracula/vim' 'vim-airline/vim-airline'
+" vim-colors-solarized 'dracula/vim' 'vim-airline/vim-airline' vim-devicons
 lua require('core.ui')
-lua require('core.hydra')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ZFVimIM ZFVimJob ZFVimIM_openapi ZFVimIM_pinyin 中文输入法
 lua require('core.ZFVimIM')
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" hydra 键绑定
+lua require('core.hydra')
