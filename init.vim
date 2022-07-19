@@ -124,7 +124,10 @@ Plug 'godlygeek/tabular' " 字符对齐
 Plug 'phaazon/hop.nvim'
 
 call plug#end()
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 基础设置
 lua require('core.basic')
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-colors-solarized 'dracula/vim' 'vim-airline/vim-airline'
 lua require('core.ui')
 lua require('core.hydra')
