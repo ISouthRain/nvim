@@ -31,7 +31,7 @@ Hydra({
     foreign_keys = "warn",
     buffer = bufnr,
     color = 'pink',
-    invoke_on_body = true,
+    -- invoke_on_body = true,
     hint = {
         border = 'rounded',-- 窗口圆润
         position = 'bottom-left'-- 弹出位置
