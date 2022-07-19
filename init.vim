@@ -137,5 +137,8 @@ lua require('core.ZFVimIM')
 " vim-gnupg registers.nvim
 lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nerdtree
+lua require('core.navigation')
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hydra 键绑定
 lua require('core.hydra')

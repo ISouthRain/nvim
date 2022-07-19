@@ -61,10 +61,6 @@ Plug 'kyazdani42/nvim-web-devicons' " 图标依赖
 Plug 'romgrk/barbar.nvim'
 " Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 
-" ================= 文件浏览器 =================
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeFind' } "文件目录浏览器
-
-
 
 
 " ================= 翻译插件 =================
@@ -385,25 +381,6 @@ require('plugins.rainbow')
 EOF
 "*********配置插件 rainbow 括号不同颜色 结束*******
 
-" *********** 配置文件浏览器 nerdtree 开始  *******
-
-lua << EOF
-require('plugins.nerdtree')
-EOF
-
-map <capslock>nerdtree :NERDTreeToggle<CR>
-" noremap <Leader>nn :NERDTreeToggle<CR>
-" let g:lmap.nn = ['NERDTreeToggle', '文件浏览器']
-let g:lmap.nn = ['NERDTreeFind', '文件浏览器']
-
-" let g:which_key_map['n'] = {
-      " \ 'name' : '+NERDTree文件浏览器' ,
-      " \ 'n' : ['<capslock>nerdtree'  , '文件浏览器']      ,
-      " \ }
-" "      \ '' : ['<>'  , '']      ,
-
-
-" ******************** 配置 nerdtree 结束 ************
 
 "**********配置文件模糊搜索插件 LeaderF ****
 lua << EOF
