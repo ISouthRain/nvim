@@ -12,8 +12,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 inoremap <C-v> <ESC>pa
-nnoremap <Leader><Space> :HopChar1<CR>
-vnoremap <Leader><Space> :HopChar1<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader 键修改
 let g:mapleader = "\<Space>"
@@ -46,6 +45,7 @@ Hydra({
       -- { '',  , {exit = true, nowait = true,}},
       { 'nnn', ':NERDTreeFind<CR>', {exit = true, nowait = true,}},
       { 'nc', '<Plug>NERDCommenterComment' , {exit = true, nowait = true,}},
+      { '<Space>', cmd 'HopChar1' , {exit = true, nowait = true,}},
       { 'q', nil, { exit = true, nowait = true,}},
       { '<ESC>', nil, { exit = true, nowait = true,}},
    }

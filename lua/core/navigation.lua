@@ -13,5 +13,6 @@ let NERDTreeShowLineNumbers = 1 " 显示行号
 let g:NERDTreeQuitOnOpen = 1 "打开文件自动退出NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hop.nvim
-require'hop'.setup()
+
 ]])
+require'hop'.setup()
