@@ -19,7 +19,7 @@ let g:maplocalleader = ','
 
 local Hydra = require('hydra')
 local KeyHome = [[
-_nn_: NERDTree
+_nn_: NERDTree     _fy_: 翻译
 _nc_: 注释
 _<Space>_: 单词跳跃 _k_: Search _K_: DSearch
 _q_: exit _<ESC>_: exit
@@ -41,6 +41,7 @@ Hydra({
    body = '<Leader>',
    heads = {
       -- { '',  , {exit = true, nowait = true,}},
+      { 'fy', '<Plug>TranslateW' , {exit = true, nowait = true,}},
       { 'nn', ':NERDTreeFind<CR>', {exit = true, nowait = true,}},
       { 'nc', '<Plug>NERDCommenterComment' , {exit = true, nowait = true,}},
       { '<Space>', ':HopChar1<CR>' , {exit = true, nowait = true,}},
