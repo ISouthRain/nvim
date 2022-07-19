@@ -674,15 +674,6 @@ call wilder#set_option('renderer', wilder#wildmenu_renderer(
 
 " ============== 配置 命令行提示 Wilder.nvim 开始=================
 
-" ======= 配置 光标快速移动 hop.nvim 开始===========
-lua << EOF
-require'hop'.setup()
-EOF
-" 单个字符
-nnoremap <Leader><Space> :HopChar1<CR>
-vnoremap <Leader><Space> :HopChar1<CR>
-" 单词开头
-" ======= 配置 光标快速移动 hop.nvim 结束===========
 
 " ==========  配置撤销记录 Undotree.vim 开始 ================== 
 if has("persistent_undo")
