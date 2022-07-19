@@ -134,5 +134,8 @@ lua require('core.ui')
 " ZFVimIM ZFVimJob ZFVimIM_openapi ZFVimIM_pinyin 中文输入法
 lua require('core.ZFVimIM')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-gnupg
+lua require('core.edit')
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hydra 键绑定
 lua require('core.hydra')

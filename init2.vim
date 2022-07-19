@@ -33,8 +33,6 @@ Plug 'github/copilot.vim'
 Plug 'hecal3/vim-leader-guide'
 Plug 'liuchengxu/vim-which-key' " 键绑定
 " ========================================
-" 加密和解密文件
-Plug 'jamessan/vim-gnupg'
 
 " ================= 启动插件 =================
 Plug 'dstein64/vim-startuptime' " 测试启动时间 使用命令 StartupTime
