@@ -65,7 +65,7 @@ Hydra({
      },
    },
    mode = {'n','v'},
- --  body = '<Leader>fy',
+   body = '<Leader>fy',
    heads = {
       -- { '',  , {exit = true, nowait = true,}},
       { 'w', '<Plug>TranslateW' , {exit = true, nowait = true,}},
