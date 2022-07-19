@@ -41,7 +41,7 @@ Hydra({
    body = '<Leader>',
    heads = {
       -- { '',  , {exit = true, nowait = true,}},
-      { 'fy', 'fy' , {exit = false, nowait = true,}},
+      { 'fy', '<Leader>fy' , {exit = true, nowait = true,}},
       { 'nn', ':NERDTreeFind<CR>', {exit = true, nowait = true,}},
       { 'nc', '<Plug>NERDCommenterComment' , {exit = true, nowait = true,}},
       { '<Space>', ':HopChar1<CR>' , {exit = true, nowait = true,}},
@@ -65,7 +65,7 @@ Hydra({
      },
    },
    mode = {'n','v'},
-   body = 'fy',
+   body = '<Leader>fy',
    heads = {
       -- { '',  , {exit = true, nowait = true,}},
       { 'w', '<Plug>TranslateW' , {exit = true, nowait = true,}},
