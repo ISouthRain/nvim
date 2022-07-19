@@ -134,7 +134,7 @@ lua require('core.ui')
 " ZFVimIM ZFVimJob ZFVimIM_openapi ZFVimIM_pinyin 中文输入法
 lua require('core.ZFVimIM')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-gnupg registers.nvim nerdcommenter
+" vim-gnupg registers.nvim nerdcommenter undotree
 lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdtree hop.nvim wilder.nvim

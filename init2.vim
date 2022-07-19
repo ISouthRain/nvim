@@ -73,7 +73,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-json coc-
 " ================= 其余插件 =================
 Plug 'jiangmiao/auto-pairs' " 符号补全
 Plug 'luochen1990/rainbow' " 括号不同颜色
-Plug 'mbbill/undotree' "更改历史
+
 Plug 'lfv89/vim-interestingwords' " 高亮搜索文本不同颜色 
 Plug 'itchyny/calendar.vim' " 日历
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'} "块代码编辑
@@ -637,28 +637,7 @@ let g:lmap.bb = {
 
 
 
-" ==========  配置撤销记录 Undotree.vim 开始 ================== 
-if has("persistent_undo")
-    if has('win32')
-        let target_path = expand('C:\Users\Jack\AppData\Local\nvim\.undodir')
-    endif
-    if has('unix')
-        let target_path = expand('~/.config/nvim/.undodir')
-    endif
-    if has('macunix')
-        let target_path = expand('~/.config/nvim/.undodir')
-    endif
-    " create the directory and any parent directories
-    " if the location does not exist.
-    if !isdirectory(target_path)
-        call mkdir(target_path, "p", 0700)
-    endif
 
-    let &undodir=target_path
-    set undofile
-endif
-
-" ==========  配置撤销记录 Undotree.vim 结束 ================== 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 "" =================================

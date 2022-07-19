@@ -32,4 +32,25 @@ let g:NERDTrimTrailingWhitespace = 1
 " 启用 nerdcommenter 切换以检查所有选定的行是否被注释
 let g:NERDToggleCheckAllLines = 1
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" undotree
+if has("persistent_undo")
+    if has('win32')
+        let target_path = expand('C:\Users\Jack\AppData\Local\nvim\.undodir')
+    endif
+    if has('unix')
+        let target_path = expand('~/.config/nvim/.undodir')
+    endif
+    if has('macunix')
+        let target_path = expand('~/.config/nvim/.undodir')
+    endif
+    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call mkdir(target_path, "p", 0700)
+    endif
+
+    let &undodir=target_path
+    set undofile
+endif
 ]])
