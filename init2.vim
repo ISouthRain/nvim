@@ -72,7 +72,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-json coc-
 
 " ================= 其余插件 =================
 Plug 'jiangmiao/auto-pairs' " 符号补全
-Plug 'luochen1990/rainbow' " 括号不同颜色
+
 
 Plug 'lfv89/vim-interestingwords' " 高亮搜索文本不同颜色 
 Plug 'itchyny/calendar.vim' " 日历
@@ -361,11 +361,6 @@ let g:which_key_map['fg'] = {
 " ******* 翻译插件配置 vim-translator  结束*********"
 
 
-"*********配置插件rainbow括号不同颜色*******
-lua << EOF
-require('plugins.rainbow')
-EOF
-"*********配置插件 rainbow 括号不同颜色 结束*******
 
 
 "**********配置文件模糊搜索插件 LeaderF ****
