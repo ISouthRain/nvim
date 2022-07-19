@@ -80,13 +80,14 @@ let g:rainbow_conf = {
 \   }
 \}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-indent-guides 指导线
+"" vim-indent-guides 指导线
 let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
 let g:indent_guides_start_level = 2  " 从第二层开始可视化显示缩进
-]])
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" indent-blankline.nvim 指导线
+]]) ------- vim 介绍
+
+-------------------------------------------------------
+-- indent-blankline.nvim 指导线
 -- -- 两者配置二选一
 -- vim.opt.list = true
 -- vim.opt.listchars:append("space:⋅")
