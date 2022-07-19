@@ -70,11 +70,9 @@ Plug 'voldikss/vim-translator' "翻译插件
 " Plug 'puremourning/vimspector' " 语言调试器
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-json coc-tsserver coc-pyright coc-html'} "补全插件
 
-" ================= 其余插件 =================
-Plug 'jiangmiao/auto-pairs' " 符号补全
 
 
-Plug 'lfv89/vim-interestingwords' " 高亮搜索文本不同颜色 
+
 Plug 'itchyny/calendar.vim' " 日历
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'} "块代码编辑
 
@@ -395,10 +393,6 @@ noremap <capslock>lfp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><
 "**********配置文件模糊搜索插件 LeaderF  结束****
 
 " ********** 文本高亮插件 vim-interestingwords 开始 **************
-
-lua << EOF
-require('plugins.vim-interestingwords')
-EOF
 
 let g:lmap.k = ["call InterestingWords('n')", '高亮文本并查找']
 let g:lmap.K = ["call UncolorAllWords()", '取消所有高亮文本']
