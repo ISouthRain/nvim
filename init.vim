@@ -131,3 +131,6 @@ lua require('core.basic')
 " vim-colors-solarized 'dracula/vim' 'vim-airline/vim-airline'
 lua require('core.ui')
 lua require('core.hydra')
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ZFVimIM ZFVimJob ZFVimIM_openapi ZFVimIM_pinyin 中文输入法
+lua require('core.ZFVimIM')
