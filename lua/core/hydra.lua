@@ -21,7 +21,7 @@ local Hydra = require('hydra')
 local KeyHome = [[
 _nn_: NERDTree
 _nc_: 注释
-_<Space>_: 单词跳跃 _k_: Search
+_<Space>_: 单词跳跃 _k_: Search _K_: DSearch
 _q_: exit _<ESC>_: exit
 ]]
 Hydra({
@@ -45,6 +45,7 @@ Hydra({
       { 'nc', '<Plug>NERDCommenterComment' , {exit = true, nowait = true,}},
       { '<Space>', ':HopChar1<CR>' , {exit = true, nowait = true,}},
       { 'k', ":call InterestingWords('n')<CR>" , {exit = true, nowait = true,}},
+      { 'K', "call UncolorAllWords()<CR>" , {exit = true, nowait = true,}},
       { 'q', nil, { exit = true, nowait = true,}},
       { '<ESC>', nil, { exit = true, nowait = true,}},
    }
