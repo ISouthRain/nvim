@@ -137,7 +137,7 @@ lua require('core.ZFVimIM')
 " vim-gnupg registers.nvim nerdcommenter
 lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nerdtree 
+" nerdtree hop.nvim
 lua require('core.navigation')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hydra 键绑定

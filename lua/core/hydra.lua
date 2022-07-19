@@ -12,7 +12,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 inoremap <C-v> <ESC>pa
-
+nnoremap <Leader><Space> :HopChar1<CR>
+vnoremap <Leader><Space> :HopChar1<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader 键修改
 let g:mapleader = "\<Space>"

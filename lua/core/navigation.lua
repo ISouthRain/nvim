@@ -11,5 +11,7 @@ let NERDTreeHightCursorline=1 "高亮当前文件
 let NERDTreeShowHidden=1 "显示隐藏文件
 let NERDTreeShowLineNumbers = 1 " 显示行号
 let g:NERDTreeQuitOnOpen = 1 "打开文件自动退出NERDTree
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" hop.nvim
+require'hop'.setup()
 ]])
