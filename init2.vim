@@ -52,7 +52,6 @@ Plug 'crispgm/telescope-heading.nvim' " 文件标题查找
 
 
 " ================= Buffer 标签栏 =================
-Plug 'kyazdani42/nvim-web-devicons' " 图标依赖
 Plug 'romgrk/barbar.nvim'
 " Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 
