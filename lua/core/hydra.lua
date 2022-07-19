@@ -26,7 +26,7 @@ _q_: exit _<ESC>_: exit
 ]]
 Hydra({
    name = 'Home',
-   hint = KeyHome,
+   hint = KeyHome,-- 调用的按键注释名
    config = {
     foreign_keys = "warn",
     buffer = bufnr,
