@@ -44,7 +44,7 @@ Hydra({
       { 'nn', ':NERDTreeFind<CR>', {exit = true, nowait = true,}},
       { 'nc', '<Plug>NERDCommenterComment' , {exit = true, nowait = true,}},
       { '<Space>', ':HopChar1<CR>' , {exit = true, nowait = true,}},
-      { 'k', ':call InterestingWords('n')' , {exit = true, nowait = true,}},
+      { 'k', ":call InterestingWords('n')<CR>" , {exit = true, nowait = true,}},
       { 'q', nil, { exit = true, nowait = true,}},
       { '<ESC>', nil, { exit = true, nowait = true,}},
    }
