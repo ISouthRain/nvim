@@ -82,15 +82,6 @@ Plug 'itchyny/calendar.vim' " 日历
 
 
 
-
-
-Plug 'preservim/nerdcommenter' " 注释代码
-
-
-
-
-
-
 " ================= Markdown =================
 Plug 'vimwiki/vimwiki' "个人wiki
 Plug 'vitalk/vim-simple-todo' " TODO 
@@ -219,9 +210,6 @@ EOF
 
 " 创建默认映射
 "let g:NERDCreateDefaultMappings = 1
-lua << EOF
-require('plugins.nerdcommenter')
-EOF
 " nmap nci <Plug>NERDCommenterComment
 " vmap nci <Plug>NERDCommenterComment
 " nmap ncc <Plug>NERDCommenterUncomment

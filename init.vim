@@ -134,10 +134,10 @@ lua require('core.ui')
 " ZFVimIM ZFVimJob ZFVimIM_openapi ZFVimIM_pinyin 中文输入法
 lua require('core.ZFVimIM')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-gnupg registers.nvim
+" vim-gnupg registers.nvim nerdcommenter
 lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nerdtree
+" nerdtree 
 lua require('core.navigation')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hydra 键绑定
