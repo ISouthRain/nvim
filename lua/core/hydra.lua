@@ -21,7 +21,7 @@ local Hydra = require('hydra')
 local KeyHome = [[
 _nn_: NERDTree
 _nc_: 注释
-_<Space>_: 单词跳跃
+_<Space>_: 单词跳跃 _k_: Search
 _q_: exit _<ESC>_: exit
 ]]
 Hydra({
