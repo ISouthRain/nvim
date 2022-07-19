@@ -20,10 +20,7 @@ Plug 'iamcco/markdown-preview.nvim'
 Plug 'plasticboy/vim-markdown'
 Plug 'dhruvasagar/vim-table-mode'
 
-" =========================================
-" 寄存器, 剪贴板
-Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
-" =========================================
+
 " 终端
 Plug 'akinsho/toggleterm.nvim'
 " =========================================
@@ -1012,12 +1009,6 @@ EOF
 "============ 配置 neovim 对加密文件的支持 开始====================
 
 
-" ================= 配置 tversteeg/registers.nvim 粘贴 开始 =================
-let g:registers_tab_symbol = "\t"
-let g:registers_window_border = "single"
-let g:registers_window_min_height = 10
-let g:lmap.p = ['Registers', '剪贴板']
-" ================= 配置 tversteeg/registers.nvim 粘贴 结束 =================
 
 if has('win32') "macunix unix win32
    " nnoremap <Leader>mdf :e F:\\Hugo\\content\\posts\\Home.md<CR>
