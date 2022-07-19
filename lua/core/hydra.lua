@@ -33,8 +33,8 @@ Hydra({
     color = 'pink',
     invoke_on_body = true,
     hint = {
-        border = 'rounded',
-        position = 'bottom-left'
+        border = 'rounded',-- 窗口圆润
+        position = 'bottom-left'-- 弹出位置
      },
    },
    mode = {'n','v'},
