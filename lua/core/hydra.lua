@@ -33,7 +33,7 @@ Hydra({
     color = 'pink',-- 支持连续按的键颜色
     invoke_on_body = true,-- 不允许只能按 body 支持的键
     hint = {
-        border = 'rounded',-- 窗口圆润
+        border = 'rounded',-- 弹出的窗口圆润
         position = 'bottom-left'-- 弹出位置
      },
    },
