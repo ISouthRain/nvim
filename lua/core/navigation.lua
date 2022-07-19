@@ -11,4 +11,40 @@ let NERDTreeHightCursorline=1 "高亮当前文件
 let NERDTreeShowHidden=1 "显示隐藏文件
 let NERDTreeShowLineNumbers = 1 " 显示行号
 let g:NERDTreeQuitOnOpen = 1 "打开文件自动退出NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" wilder.nvim
+" Key bindings can be changed, see below
+call wilder#setup({'modes': [':', '/', '?']})
+
+" Default keys
+call wilder#setup({
+	  \ 'modes': [':', '/', '?'],
+	  \ 'next_key': '<Tab>',
+	  \ 'previous_key': '<S-Tab>',
+	  \ 'accept_key': '<Down>',
+	  \ 'reject_key': '<Up>',
+	  \ })
+
+" 'highlighter' : applies highlighting to the candidates
+call wilder#set_option('renderer', wilder#wildmenu_renderer({
+	  \ 'highlighter': wilder#basic_highlighter(),
+	  \ }))
+" Use wilder#wildmenu_lightline_theme() if using Lightline
+" 'highlights' : can be overriden, see :h wilder#wildmenu_renderer()
+call wilder#set_option('renderer', wilder#wildmenu_renderer(
+	  \ wilder#wildmenu_airline_theme({
+	  \   'highlights': {},
+	  \   'highlighter': wilder#basic_highlighter(),
+	  \   'separator': ' · ',
+	  \ })))
+
+" call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_palette_theme({
+      " \ 'border': 'rounded',
+      " \ 'max_height': '75%',
+      " \ 'min_height': 0,
+      " \ 'prompt_position': 'top',
+      " \ 'reverse': 0,
+      " \ })))
+
+
 ]])

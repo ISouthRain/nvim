@@ -137,7 +137,7 @@ lua require('core.ZFVimIM')
 " vim-gnupg registers.nvim nerdcommenter
 lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nerdtree hop.nvim
+" nerdtree hop.nvim wilder.nvim
 lua require('core.navigation')
 lua << EOF
 require'hop'.setup()

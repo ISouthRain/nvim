@@ -53,8 +53,6 @@ Plug 'LinArcX/telescope-command-palette.nvim' " 函数提示
 Plug 'xiyaowong/telescope-emoji.nvim' " 基于 Telescope 的表情符号
 Plug 'crispgm/telescope-heading.nvim' " 文件标题查找
 
-" ================= 命令/搜索提示 =================
-Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' } " 命令行提示 与 pynvim 冲突, /搜索用不了
 
 " ================= Buffer 标签栏 =================
 Plug 'kyazdani42/nvim-web-devicons' " 图标依赖
@@ -637,42 +635,6 @@ let g:lmap.bb = {
 
 " ====== barbar.nvim 标签 Buffers 配置 结束 =================
 
-" ============== 配置 命令行提示 Wilder.nvim 开始=================
-" Key bindings can be changed, see below
-call wilder#setup({'modes': [':', '/', '?']})
-
-" Default keys
-call wilder#setup({
-	  \ 'modes': [':', '/', '?'],
-	  \ 'next_key': '<Tab>',
-	  \ 'previous_key': '<S-Tab>',
-	  \ 'accept_key': '<Down>',
-	  \ 'reject_key': '<Up>',
-	  \ })
-
-" 'highlighter' : applies highlighting to the candidates
-call wilder#set_option('renderer', wilder#wildmenu_renderer({
-	  \ 'highlighter': wilder#basic_highlighter(),
-	  \ }))
-" Use wilder#wildmenu_lightline_theme() if using Lightline
-" 'highlights' : can be overriden, see :h wilder#wildmenu_renderer()
-call wilder#set_option('renderer', wilder#wildmenu_renderer(
-	  \ wilder#wildmenu_airline_theme({
-	  \   'highlights': {},
-	  \   'highlighter': wilder#basic_highlighter(),
-	  \   'separator': ' · ',
-	  \ })))
-
-" call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_palette_theme({
-      " \ 'border': 'rounded',
-      " \ 'max_height': '75%',
-      " \ 'min_height': 0,
-      " \ 'prompt_position': 'top',
-      " \ 'reverse': 0,
-      " \ })))
-
-
-" ============== 配置 命令行提示 Wilder.nvim 开始=================
 
 
 " ==========  配置撤销记录 Undotree.vim 开始 ================== 
