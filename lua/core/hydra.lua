@@ -100,7 +100,7 @@ Hydra({
       }
    },
    mode = {'n','x'},
-   body = '<leader>o',
+   body = '<f6>',
    heads = {
       { 'n', function()
          if vim.o.number == true then
