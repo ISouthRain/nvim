@@ -134,10 +134,10 @@ lua require('core.ui')
 " ZFVimIM ZFVimJob ZFVimIM_openapi ZFVimIM_pinyin 中文输入法
 lua require('core.ZFVimIM')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-gnupg registers.nvim nerdcommenter undotree rainbow auto-pairs vim-interestingwords
+" vim-gnupg registers.nvim nerdcommenter undotree rainbow auto-pairs
 lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nerdtree hop.nvim wilder.nvim
+" nerdtree hop.nvim wilder.nvim vim-interestingwords
 lua require('core.navigation')
 lua << EOF
 require'hop'.setup()

@@ -392,15 +392,7 @@ noremap <capslock>lfp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><
 
 "**********配置文件模糊搜索插件 LeaderF  结束****
 
-" ********** 文本高亮插件 vim-interestingwords 开始 **************
 
-let g:lmap.k = ["call InterestingWords('n')", '高亮文本并查找']
-let g:lmap.K = ["call UncolorAllWords()", '取消所有高亮文本']
-" let g:which_key_map.k = '高亮文本并查找'
-
-
-
-" ********** 文本高亮插件  vim-interestingwords 结束*************
 
 """********** 配置缩进线 indetline 开始 vim-indent-guides **********
 let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
