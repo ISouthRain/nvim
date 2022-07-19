@@ -41,7 +41,7 @@ Hydra({
    body = '<Leader>',
    heads = {
       -- { '',  , {exit = true, nowait = true,}},
-      { 'fy', 'fy' , {exit = true, nowait = true,}},
+      { 'fy', 'fy' , {exit = false, nowait = true,}},
       { 'nn', ':NERDTreeFind<CR>', {exit = true, nowait = true,}},
       { 'nc', '<Plug>NERDCommenterComment' , {exit = true, nowait = true,}},
       { '<Space>', ':HopChar1<CR>' , {exit = true, nowait = true,}},
