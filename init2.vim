@@ -42,9 +42,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 " ================= 书签 =================
 Plug 'MattesGroeger/vim-bookmarks' " 书签
 
-" ================= 指导线 =================
-Plug 'lukas-reineke/indent-blankline.nvim' " 指导线
-Plug 'nathanaelkane/vim-indent-guides' "缩进线，与上面的指导线插件可以二选一,因为这个插件似乎没有用
 
 " ================= Telecope 众包 =================
 Plug 'nvim-lua/plenary.nvim'
@@ -391,13 +388,6 @@ noremap <capslock>lfn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
 noremap <capslock>lfp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
 
 "**********配置文件模糊搜索插件 LeaderF  结束****
-
-
-
-"""********** 配置缩进线 indetline 开始 vim-indent-guides **********
-let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
-let g:indent_guides_start_level = 2  " 从第二层开始可视化显示缩进
-"""********** 配置缩进线 indetline 结束	vim-indent-guides **********
 
 
 " ************ python,go,nodejs,web调试器 ****************************
@@ -747,11 +737,7 @@ EOF
 
 
 
-" ============ 配置 indent-blankline.nvim 开始 ==============
-lua << EOF
-require('plugins.indent-blankline-nvim')
-EOF
-" ============ 配置 indent-blankline.nvim 结束 ==============
+
 
 
 " ============ 配置 vim-bookmarks 开始 ====================
