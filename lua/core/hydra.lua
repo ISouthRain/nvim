@@ -41,13 +41,35 @@ Hydra({
    body = '<Leader>',
    heads = {
       -- { '',  , {exit = true, nowait = true,}},
-      { 'fy', '<Plug>TranslateW' , {exit = true, nowait = true,}},
+      { 'fy', 'fy' , {exit = true, nowait = true,}},
       { 'nn', ':NERDTreeFind<CR>', {exit = true, nowait = true,}},
       { 'nc', '<Plug>NERDCommenterComment' , {exit = true, nowait = true,}},
       { '<Space>', ':HopChar1<CR>' , {exit = true, nowait = true,}},
       { 'k', ":call InterestingWords('n')<CR>" , {exit = true, nowait = true,}},
       { 'K', "call UncolorAllWords()<CR>" , {exit = true, nowait = true,}},
       { 'q', nil, { exit = true, nowait = true,}},
+      { '<ESC>', nil, { exit = true, nowait = true,}},
+   }
+})
+Hydra({
+   name = 'Home',
+   -- hint = KeyHome,
+   config = {
+    foreign_keys = "warn",
+    buffer = bufnr,
+    color = 'pink',
+    invoke_on_body = true,
+    hint = {
+        border = 'rounded',
+        position = 'bottom-left'
+     },
+   },
+   mode = {'n','v'},
+   body = 'fy',
+   heads = {
+      -- { '',  , {exit = true, nowait = true,}},
+      { 'w', '<Plug>TranslateW' , {exit = true, nowait = true,}},
+      { 'W', '<Plug>TranslateWV' , {exit = true, nowait = true,}},
       { '<ESC>', nil, { exit = true, nowait = true,}},
    }
 })
