@@ -8,6 +8,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 居中模式
 Plug 'junegunn/goyo.vim'
+" 佛系模式
+Plug 'folke/zen-mode.nvim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neorg
 Plug 'nvim-neorg/neorg'
