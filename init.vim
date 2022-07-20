@@ -88,7 +88,7 @@ Plug 'voldikss/vim-translator'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 计算机语言
 " Plug 'puremourning/vimspector' " 语言调试器
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'CocInstall coc-json coc-tsserver coc-pyright coc-html coc-clangd'} "补全插件
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'CocInstall coc-json coc-tsserver coc-pyright coc-html coc-clangd coc-markdownlint'} "补全插件
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 其余插件
 Plug 'jiangmiao/auto-pairs' " 符号补全
