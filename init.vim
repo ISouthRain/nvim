@@ -7,8 +7,8 @@ call plug#begin('~/.config/nvim/plugged')
 " endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 语言导航
-Plug "nvim-treesitter/nvim-treesitter"
-Plug "SmiteshP/nvim-gps"
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'SmiteshP/nvim-gps'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 居中模式
 Plug 'junegunn/goyo.vim'
