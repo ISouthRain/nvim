@@ -6,6 +6,9 @@ if has('win32') "macunix unix win32
     call plug#begin('C:\\Users\\Jack\\AppData\\Local\\nvim\\plugged')
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 居中模式
+Plug 'junegunn/goyo.vim'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neorg
 Plug 'nvim-neorg/neorg'
 Plug 'nvim-lua/plenary.nvim'
