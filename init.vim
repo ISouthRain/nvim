@@ -2,9 +2,9 @@
 "    echo "这是Windows 配置"
 "endif
 call plug#begin('~/.config/nvim/plugged')
-if has('win32') "macunix unix win32
-    call plug#begin('C:\\Users\\Jack\\AppData\\Local\\nvim\\plugged')
-endif
+" if has('win32') "macunix unix win32
+"    call plug#begin('C:\\Users\\Jack\\AppData\\Local\\nvim\\plugged')
+" endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 语言导航
 Plug "nvim-treesitter/nvim-treesitter"
