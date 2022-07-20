@@ -112,3 +112,10 @@ require("nvim-gps").setup({
 	-- indicator used when context hits depth limit
 	depth_limit_indicator = ".."
 })
+-- Lua
+local gps = require("nvim-gps")
+
+gps.is_available()  -- Returns boolean value indicating whether a output can be provided
+gps.get_location()  -- Returns a string with context information (or nil if not available)
+
+-- example output: "mystruct > sum"
