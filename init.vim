@@ -2,13 +2,9 @@
 "    echo "这是Windows 配置"
 "endif
 call plug#begin('~/.config/nvim/plugged')
-" if has('win32') "macunix unix win32
-"    call plug#begin('C:\\Users\\Jack\\AppData\\Local\\nvim\\plugged')
-" endif
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 语言导航
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'SmiteshP/nvim-gps'
+if has('win32') "macunix unix win32
+   call plug#begin('C:\\Users\\Jack\\AppData\\Local\\nvim\\plugged')
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 居中模式
 Plug 'junegunn/goyo.vim'
@@ -68,7 +64,7 @@ Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' } " 命令行提示 �
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buffer 标签栏
 Plug 'kyazdani42/nvim-web-devicons' " 图标依赖
-Plug 'romgrk/barbar.nvim'
+" Plug 'romgrk/barbar.nvim'
 " Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'vim-airline/vim-airline' " 状态栏美化
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -92,7 +88,7 @@ Plug 'voldikss/vim-translator'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 计算机语言
 " Plug 'puremourning/vimspector' " 语言调试器
-" Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':CocInstall coc-json coc-tsserver coc-pyright coc-html'} "补全插件
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'CocInstall coc-json coc-tsserver coc-pyright coc-html coc-clangd'} "补全插件
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 其余插件
 Plug 'jiangmiao/auto-pairs' " 符号补全
@@ -100,7 +96,7 @@ Plug 'luochen1990/rainbow' " 括号不同颜色
 Plug 'mbbill/undotree' "更改历史
 Plug 'lfv89/vim-interestingwords' " 高亮搜索文本不同颜色
 Plug 'itchyny/calendar.vim' " 日历
-" Plug 'mg979/vim-visual-multi', {'branch': 'master'} "块代码编辑
+" Plug 'mg979/vim-visual-multi', {'branch': 'master'} "多光标编辑
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 注释代码
 Plug 'preservim/nerdcommenter', {'on': '<Plug>NERDCommenterToggle'}
@@ -112,6 +108,8 @@ Plug 'godlygeek/tabular'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 光标快速移动
 Plug 'phaazon/hop.nvim'
+" 窗口数字
+Plug 'https://gitlab.com/yorickpeterse/nvim-window.git'
 
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -128,7 +126,7 @@ lua require('core.ZFVimIM')
 " vim-gnupg registers.nvim nerdcommenter undotree rainbow auto-pairs indent-blankline.nvim vim-indent-guides vim-translator
 lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nerdtree hop.nvim wilder.nvim vim-interestingwords
+" nerdtree hop.nvim wilder.nvim vim-interestingwords nvim-window
 lua require('core.navigation')
 lua << EOF
 require'hop'.setup()
@@ -145,10 +143,10 @@ lua require('core.markdown')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neorg
 " lua require('core.neorg')
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 写代码
+" 写代码 coc.nvim
 lua require('core.language')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hydra 键绑定
 lua require('core.hydra')
+

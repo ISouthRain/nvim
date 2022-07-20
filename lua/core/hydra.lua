@@ -20,12 +20,10 @@ let g:maplocalleader = ','
 " 键绑定
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " barbar.nvim buffer 跳转
-nnoremap <Leader>bh :BufferPrevious<CR>
-nnoremap <Leader>bl :BufferNext<CR>
-" Close buffer
-nnoremap <Leader>xk :BufferClose<CR>
-" Magic buffer-picking mode
-nnoremap <Leader>bp :BufferPick<CR>
+" nnoremap <Leader>bh :bp<CR>
+" nnoremap <Leader>bl :bn<CR>
+nnoremap <Leader>xk :bdelete<CR>
+nnoremap <f2> :Startify<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Markdown
 nnoremap <Leader>mh :Telescope heading<CR>
@@ -96,8 +94,7 @@ nnoremap <Leader><Space> :HopChar1<CR>
 vnoremap <Leader><Space> :HopChar1<CR>
 
 ]]) -- Vim 结束
-
--- local Hydra = require('hydra')
+local Hydra = require('hydra')
 -- local KeyHome = [[
 -- _nn_: NERDTree     _fy_: 翻译
 -- _nc_: 注释
@@ -130,3 +127,40 @@ vnoremap <Leader><Space> :HopChar1<CR>
 --       { '<ESC>', nil, { exit = true, nowait = true,}},
 --    }
 -- })
+-----------------------------------------------------------------
+-- Buffer Windows
+local HydraBuffer = [[
+_h_: light buff  _l_: right buff  _K_: kill buff
+_w_: num Window  _s_: split       _v_: vsplit
+_R_: RWindow     _b_: Sech buff
+_q_: exit        _<ESC>_: exit
+]]
+Hydra({
+   name = 'Buffers',
+   hint = HydraBuffer,-- 调用的按键注释名
+   config = {
+	foreign_keys = "warn",
+	buffer = bufnr,
+	color = 'pink',-- 支持连续按的键颜色
+	invoke_on_body = true,-- 不允许只能按 body 支持的键
+	hint = {
+		border = 'rounded',-- 弹出的窗口圆润
+		position = 'bottom-left'-- 弹出位置
+	 },
+   },
+   mode = {'n','v'},
+   body = '<Leader>b',
+   heads = {
+	  -- { '',  , {exit = true, nowait = true,}},
+	  { 'l', ":bn<CR>" , {exit = false, nowait = true,}},
+	  { 'h', ":bp<CR>" , {exit = false, nowait = true,}},
+	  { 'b', ":Telescope buffers<CR>" , {exit = true, nowait = true,}},
+	  { 'K', ":bdelete<CR>" , {exit = false, nowait = true,}},
+	  { 'w', ":lua require('nvim-window').pick()<CR>" , {exit = true, nowait = true,}},
+	  { 's', ":split<CR>" , {exit = false, nowait = true,}},
+	  { 'v', ":vsplit<CR>" , {exit = false, nowait = true,}},
+	  { 'R', ":q<CR>" , {exit = false, nowait = true,}},
+	  { 'q', nil, { exit = true, nowait = true,}},
+	  { '<ESC>', nil, { exit = true, nowait = true,}},
+   }
+})
