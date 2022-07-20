@@ -6,6 +6,10 @@ if has('win32') "macunix unix win32
     call plug#begin('C:\\Users\\Jack\\AppData\\Local\\nvim\\plugged')
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 语言导航
+Plug "nvim-treesitter/nvim-treesitter"
+Plug "SmiteshP/nvim-gps"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 居中模式
 Plug 'junegunn/goyo.vim'
 " 佛系模式
