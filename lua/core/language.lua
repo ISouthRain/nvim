@@ -28,6 +28,16 @@ require("nvim-gps").setup({
 				["string-name"] = ' '
 			}
 		},
+		["c"] = {
+			icons = {
+				["array-name"] = ' ',
+				["object-name"] = ' ',
+				["null-name"] = '[] ',
+				["boolean-name"] = 'ﰰﰴ ',
+				["number-name"] = '# ',
+				["string-name"] = ' '
+			}
+		},
 		["latex"] = {
 			icons = {
 				["title-name"] = "# ",
