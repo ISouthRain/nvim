@@ -102,7 +102,7 @@ let g:rainbow_conf = {
 let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
 let g:indent_guides_start_level = 2  " 从第二层开始可视化显示缩进
 
-]]) ------- vim 介绍
+]]) ------- Viml End
 
 -------------------------------------------------------
 -- indent-blankline.nvim 指导线

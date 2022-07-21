@@ -59,6 +59,7 @@ let g:interestingWordsRandomiseColors = 1
 vim.cmd([[
 hi BlackOnLightYellow guifg=#000000 guibg=#f2de91
 ]])
+
 require('nvim-window').setup({
   -- The characters available for hinting windows.
   chars = {
@@ -79,4 +80,3 @@ require('nvim-window').setup({
   border = 'single'
   
 })
-

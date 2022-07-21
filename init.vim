@@ -89,6 +89,7 @@ Plug 'voldikss/vim-translator'
 " 计算机语言
 " Plug 'puremourning/vimspector' " 语言调试器
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'CocInstall coc-json coc-tsserver coc-pyright coc-html coc-clangd coc-markdownlint'} "补全插件
+" Plug 'ahmedkhalf/project.nvim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 其余插件
 Plug 'jiangmiao/auto-pairs' " 符号补全
@@ -123,7 +124,7 @@ lua require('core.ui')
 " ZFVimIM ZFVimJob ZFVimIM_openapi ZFVimIM_pinyin 中文输入法
 lua require('core.ZFVimIM')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-gnupg registers.nvim nerdcommenter undotree rainbow auto-pairs indent-blankline.nvim vim-indent-guides vim-translator
+" vim-gnupg registers.nvim nerdcommenter undotree rainbow auto-pairs indent-blankline.nvim vim-indent-guides vim-translator 
 lua require('core.edit')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdtree hop.nvim wilder.nvim vim-interestingwords nvim-window
