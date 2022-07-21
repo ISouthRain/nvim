@@ -66,18 +66,18 @@ nnoremap mC :BookmarkClearAll<CR>
 nnoremap mc :BookmarkClear<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-translator
-" Echo translation in the cmdline
-nmap <silent> <Leader>fyt <Plug>Translate
-vmap <silent> <Leader>fyt <Plug>TranslateV
-" Display translation in a window
-nmap <silent> <Leader>fyw <Plug>TranslateW
-vmap <silent> <Leader>fyw <Plug>TranslateWV
-" Replace the text with translation
-nmap <silent> <Leader>fyr <Plug>TranslateR
-vmap <silent> <Leader>fyr <Plug>TranslateRV
-" Translate the text in clipboard
-nmap <silent> <Leader>fyx <Plug>TranslateX
+" " vim-translator
+" " Echo translation in the cmdline
+" nmap <silent> <Leader>fyt <Plug>Translate
+" vmap <silent> <Leader>fyt <Plug>TranslateV
+" " Display translation in a window
+" nmap <silent> <Leader>fyw <Plug>TranslateW
+" vmap <silent> <Leader>fyw <Plug>TranslateWV
+" " Replace the text with translation
+" nmap <silent> <Leader>fyr <Plug>TranslateR
+" vmap <silent> <Leader>fyr <Plug>TranslateRV
+" " Translate the text in clipboard
+" nmap <silent> <Leader>fyx <Plug>TranslateX
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdcommenter 注释
 " 是否创建默认按键映射?
