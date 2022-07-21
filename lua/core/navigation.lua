@@ -63,7 +63,7 @@ hi BlackOnLightYellow guifg=#000000 guibg=#f2de91
 require('nvim-window').setup({
   -- The characters available for hinting windows.
   chars = {
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+    'a', 's', 'd', 'f', 'g', 'h', 'h', 'j', 'k', 'l', 'u', 't', 'v', 'n', 'o',
     'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
   },
 

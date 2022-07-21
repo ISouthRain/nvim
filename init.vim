@@ -94,7 +94,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'CocInstall coc-json coc-t
 " 其余插件
 Plug 'jiangmiao/auto-pairs' " 符号补全
 Plug 'luochen1990/rainbow' " 括号不同颜色
-Plug 'mbbill/undotree' "更改历史
+Plug 'mbbill/undotree' " 更改历史
 Plug 'lfv89/vim-interestingwords' " 高亮搜索文本不同颜色
 Plug 'itchyny/calendar.vim' " 日历
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'} "多光标编辑
