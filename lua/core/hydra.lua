@@ -196,7 +196,7 @@ Hydra({
 })
 local HydraTranslateV = [[
 _t_: tabline  _w_: window  _r_: replace
-_q_: exit        _<ESC>_: exit
+_q_: exit     _<ESC>_: exit
 ]]
 Hydra({
    name = 'Buffers',
