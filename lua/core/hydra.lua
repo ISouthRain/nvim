@@ -50,9 +50,9 @@ nnoremap <Leader>sdcc :call CompileRunSdcc()<CR>
 nnoremap <Leader>git :call CompileRunGit()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " telescope
-nnoremap <Leader>te :Telescope emoji<CR>
-nnoremap <Leader>tf :Telescope find_files<CR>
-nnoremap <Leader>tb :Telescope buffers<CR>
+" nnoremap <Leader>te :Telescope emoji<CR>
+" nnoremap <Leader>tf :Telescope find_files<CR>
+" nnoremap <Leader>tb :Telescope buffers<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-bookmarks
 " 注释书签
@@ -171,7 +171,7 @@ _t_: tabline  _w_: window  _r_: replace
 _q_: exit     _<ESC>_: exit
 ]]
 Hydra({
-   name = 'Buffers',
+   name = 'Translate',
    hint = HydraTranslateN,-- 调用的按键注释名
    config = {
 	foreign_keys = "warn",
@@ -199,7 +199,7 @@ _t_: tabline  _w_: window  _r_: replace
 _q_: exit     _<ESC>_: exit
 ]]
 Hydra({
-   name = 'Buffers',
+   name = 'Translate',
    hint = HydraTranslateV,-- 调用的按键注释名
    config = {
 	foreign_keys = "warn",
@@ -218,6 +218,35 @@ Hydra({
 	  { 'w', "<Plug>TranslateWV" , {exit = true, nowait = true,}},
 	  { 'r', "<Plug>TranslateRV" , {exit = true, nowait = true,}},
 	  { 't', "<Plug>TranslateV" , {exit = true, nowait = true,}},
+	  { 'q', nil, { exit = true, nowait = true,}},
+	  { '<ESC>', nil, { exit = true, nowait = true,}},
+   }
+})
+-----------------------------------------------------------------
+-- Telescope
+local HydraTelescope = [[
+_f_: files    _e_: emoji
+_q_: exit     _<ESC>_: exit
+]]
+Hydra({
+   name = 'Telescope',
+   hint = HydraTelescope,-- 调用的按键注释名
+   config = {
+	foreign_keys = "warn",
+	buffer = bufnr,
+	color = 'pink',-- 支持连续按的键颜色
+	invoke_on_body = true,-- 不允许只能按 body 支持的键
+	hint = {
+		border = 'rounded',-- 弹出的窗口圆润
+		position = 'bottom-left'-- 弹出位置
+	 },
+   },
+   mode = {'n'},
+   body = '<Leader>t',
+   heads = {
+	  -- { '',  , {exit = true, nowait = true,}},
+	  { 'f', ":Telescope find_files<CR>" , {exit = true, nowait = true,}},
+	  { 'e', ":Telescope emoji<CR>" , {exit = true, nowait = true,}},
 	  { 'q', nil, { exit = true, nowait = true,}},
 	  { '<ESC>', nil, { exit = true, nowait = true,}},
    }
